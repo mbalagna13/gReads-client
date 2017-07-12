@@ -9,7 +9,7 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-       <a href="#!" class="brand-logo"><i class="large material-icons">book</i>Galvanize Reads</a>
+       <a href="https://greads-fc5ed.firebaseapp.com/#" class="brand-logo"><i class="large material-icons">book</i>Galvanize Reads</a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="createbook.html">Add A Book</a></li>
@@ -57,6 +57,56 @@
       </div>
     </div>
 
+    <div class="container ">
+      <div class="row">
+        <form class="col s12 pull-s1">
+          <div class="row">
+            <div class="input-field col s8">
+              <input id="title" type="text" class=" title validate">
+              <label for="title">Title</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s8">
+              <input id="genre" type="text" class="genre validate">
+              <label for="genre">Genre</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s8">
+              <input id="cover_image_url" type="text" class="cover_image_url validate">
+              <label for="cover_image_URL">Cover Image URL</label>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s8">
+                <textarea id="descritption" class="description materialize-textarea"></textarea>
+                <label for="descritption">Description</label>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8">
+              <select multiple>
+                <option value="" disabled selected>Choose your Author(s)</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Author(s)</label>
+            </div>
+          </div>
+          <button id= 'createBooks'class="btn waves-effect waves-light" type="submit" name="action">Add Book
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+
+        <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Add Book
+          <i class="material-icons right">send</i>
+        </button> -->
+      </div>
+    </div>
+
     <main>
       <div class="container">
        <div class="row books">
@@ -69,19 +119,7 @@
 <!-- handlebars appending stuff to page -->
     <script id="bookcard-template" type="text/x-handlebars-template">
 
-               <!-- <div class="col s4">
-                 <div class="card">
-                     <div class="card-image waves-effect waves-block waves-light">
-                       <img class="activator responsive-img" src={{cover}}>
-                     </div>
-                     <div class="card-content">
-                       <span class="card-title activator grey-text text-darken-4">{{title}}<i class="material-icons right">more_vert</i></span>
-                     </div>
-                     <div class="card-reveal">
-                       <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i></span>
-                       <p>{{description}}</p>
-                     </div>
-                   </div> -->
+
 
                    <div class="col s12 m7">
                      <h2 class="header">{{title}}</h2>
@@ -94,7 +132,7 @@
                            <p>{{description}}</p>
                          </div>
                          <div class="card-action">
-                           <a href="#">Edit Book</a>
+                           <a href="#">This is a link</a>
                          </div>
                        </div>
                      </div>
@@ -110,5 +148,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="index.js" charset="utf-8"></script>
+    <script src="createbook.js" charset="utf-8"></script>
   </body>
 </html>
