@@ -2,17 +2,28 @@ $(appReady);
 
 const url = 'http://localhost:3000/api/v1/books/';
 
+let BASE_URL;
+
+(function getBaseURL() {
+  if (window.location.hostname == "localhost") {
+    BASE_URL = `http://localhost:3000/api/v1/books/`
+  } else {
+    BASE_URL = `https://mtb-greads.herokuapp.com/api/v1/books/`;
+  }
+})();
+
 function appReady(){
-    getBook()
+    getBook();
+    $('select').material_select();
 };
 
 
 function getBook() {
-  $('.btn').click(function(){
+  $('.book_button').click(function(){
     const source = $('#bookcard-template').html();
     const template = Handlebars.compile(source);
     let book;
-    $.get(url).then(response => {
+    $.get(BASE_URL).then(response => {
       renderTemplate(response)
     })
     function renderTemplate(book) {
