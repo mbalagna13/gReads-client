@@ -8,21 +8,73 @@
   </head>
   <body>
     <nav>
-    <div class="nav-wrapper">
+      <div class="nav-wrapper">
        <a href="#!" class="brand-logo"><i class="large material-icons">book</i>Galvanize Reads</a>
 
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html"></a></li>
-        <li><a href="badges.html"></a></li>
-        <li><a href="collapsible.html"></a></li>
-      </ul>
-    </div>
-  </nav>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html"></a></li>
+          <li><a href="badges.html"></a></li>
+          <li><a href="collapsible.html"></a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <div class="container">
+      <a class="waves-effect waves-light btn">button</a>
+    </div>
+
+    <main>
+      <div class="container">
+       <div class="row books">
+
+         </div>
+       </div>
+      </div>
+    </main>
+
+<!-- handlebars appending stuff to page -->
+    <script id="bookcard-template" type="text/x-handlebars-template">
+
+               <!-- <div class="col s4">
+                 <div class="card">
+                     <div class="card-image waves-effect waves-block waves-light">
+                       <img class="activator responsive-img" src={{cover}}>
+                     </div>
+                     <div class="card-content">
+                       <span class="card-title activator grey-text text-darken-4">{{title}}<i class="material-icons right">more_vert</i></span>
+                     </div>
+                     <div class="card-reveal">
+                       <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i></span>
+                       <p>{{description}}</p>
+                     </div>
+                   </div> -->
+
+                   <div class="col s12 m7">
+                     <h2 class="header">{{title}}</h2>
+                     <div class="card horizontal">
+                       <div class="card-image">
+                         <img src={{cover}}>
+                       </div>
+                       <div class="card-stacked">
+                         <div class="card-content">
+                           <p>{{description}}</p>
+                         </div>
+                         <div class="card-action">
+                           <a href="#">This is a link</a>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+
+
+       </script>
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
