@@ -6,7 +6,7 @@ $(appReady);
 //   if (window.location.hostname == "localhost") {
 //     BASE_URL = `http://localhost:3000/api/v1/books/`
 //   } else {
-//     BASE_URL = `https://mtb-greads.herokuapp.com/api/v1/books/`;
+//     BASE_URL = `https://mtb-greads.herokuapp.com/api/v1/books/createBooks`;
 //   }
 // })();
 
@@ -32,7 +32,7 @@ function submitBookForm(){
         'book_cover_url': book_cover_url
       };
       console.log(eventObject);
-      $.post('http://localhost:3000/api/v1/books/createBooks', eventObject).then(res => {
+      $.post('https://mtb-greads.herokuapp.com/api/v1/books/createBooks', eventObject).then(res => {
         console.log(res);
       })
     })
