@@ -24,7 +24,7 @@ function getBookById() {
     const template = Handlebars.compile(source);
     let book;
 
-    $.get(`http://localhost:3000/api/v1/books/${book_id}`).then(response => {
+    $.get(`https://mtb-greads.herokuapp.com/api/v1/books/${book_id}`).then(response => {
       console.log(response);
       renderTemplate(response)
     })
