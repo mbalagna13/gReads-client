@@ -25,7 +25,7 @@ function getBook() {
     const source = $('#bookcard-template').html();
     const template = Handlebars.compile(source);
     let book;
-    $.get(BASE_URL).then(response => {
+    $.get('https://mtb-greads.herokuapp.com/api/v1/books/').then(response => {
       console.log(response);
       renderTemplate(response)
     })
