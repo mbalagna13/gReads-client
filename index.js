@@ -14,8 +14,10 @@ let BASE_URL;
 
 function appReady(){
     getBook();
+    editBook();
     $('select').material_select();
-};
+
+  };
 
 
 function getBook() {
@@ -24,11 +26,13 @@ function getBook() {
     const template = Handlebars.compile(source);
     let book;
     $.get(BASE_URL).then(response => {
+      console.log(response);
       renderTemplate(response)
     })
     function renderTemplate(book) {
 		book.forEach(book => {
 			let context = {
+        id: book.id,
 				title: book.book_title,
 				genre: book.book_genre,
         description: book.book_description,
@@ -39,5 +43,15 @@ function getBook() {
 		});
 	   }
 
+  })
+}
+
+function editBook() {
+  $('.editbutton').on('click', function() {
+    // let id = $(this).data('id');
+    console.log("something");
+    // console.log(id);
+    // window.location.href=`./editBook.html?id=${id}`
+    // window.location=
   })
 }
